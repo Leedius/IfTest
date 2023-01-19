@@ -1,12 +1,15 @@
 import java.util.Scanner;
 
-public class ex23 {
+public class ex2_6 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         int num1;
         int num2;
         int num3;
+        int max;
+        int avg;
+        int min;
 
         System.out.print("첫번째 수를 입력하세요 : ");
         num1 = sc.nextInt();
@@ -19,33 +22,46 @@ public class ex23 {
         System.out.println("세번째수 : " + num3);
         if (num1 > num2) {
             if (num1 > num3) {
+                max=num1;
                 if (num2 > num3) {
-                    System.out.println(num1 + ">" + num2 + ">" + num3);
+                    avg=num2;
+                    min=num3;
                 }
                 else {
-                    System.out.println(num1 + ">" + num3 + ">" + num2);
+                    min=num2;
+                    avg=num3;
                 }
             }
             else {
-                System.out.println(num3 + ">" + num1 + ">" + num2);
+                avg=num1;
+                min=num2;
+                max=num3;
             }
         }
         else {
             if (num2 > num3) {
+                max=num2;
                 if (num1 > num3) {
-                    System.out.println(num2 + ">" + num1 + ">" + num3);
-                } else {
-                    System.out.println(num2 + ">" + num3 + ">" + num1);
+                    avg=num1;
+                    min=num3;
+                }
+                else {
+                    min=num1;
+                    avg=num3;
                 }
             }
             else{
+                max=num3;
                     if (num2 > num1) {
-                        System.out.println(num3 + ">" + num2 + ">" + num1);
-                    } else {
-                        System.out.println(num3 + ">" + num1 + ">" + num2);
+                        min=num1;
+                        avg=num2;
+                    }
+                    else {
+                        avg=num1;
+                        min=num2;
                     }
             }
-
         }
+        System.out.println(max+">"+avg+">"+min);
     }
 }

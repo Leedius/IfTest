@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class ex01 {
+public class ex1_1 {
     public static void main(String[] args) {
         Random random=new Random();
         int num1= random.nextInt(100);
